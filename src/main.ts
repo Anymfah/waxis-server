@@ -7,6 +7,8 @@ async function bootstrap() {
 
   app.enableCors();
 
+  // Serve index file (.well-known)
+
   const config = new DocumentBuilder()
     .setTitle('Waxis API')
     .setDescription('The Waxis API description')

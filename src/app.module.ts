@@ -10,6 +10,7 @@ import { RolesModule } from './roles/roles.module';
 import { RoleEntity } from './roles/entities/role.entity';
 import { AuthModule } from './auth/auth.module';
 import * as process from 'process';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -27,6 +28,10 @@ import * as process from 'process';
     UsersModule,
     RolesModule,
     AuthModule,
+    ConfigModule.forRoot({
+      envFilePath: '.env',
+      isGlobal: true,
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],

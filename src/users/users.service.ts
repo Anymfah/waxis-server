@@ -48,8 +48,8 @@ export class UsersService {
     return await this.userRepository.find();
   }
 
-  public findOne(id: number) {
-    return `This action returns a #${id} user`;
+  public async findOne(id: number) {
+    return await this.userRepository.findOneBy({ id });
   }
 
   public async update(id: number, dto: UpdateUserDto) {

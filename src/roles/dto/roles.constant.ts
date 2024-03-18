@@ -1,0 +1,40 @@
+export const ROLES_CONSTANT = [
+  {
+    name: 'admin',
+    permissions: [
+      'create:users',
+      'read:users',
+      'update:users',
+      'delete:users',
+      'create:roles',
+      'read:roles',
+      'update:roles',
+      'delete:roles',
+      'create:permissions',
+      'read:permissions',
+      'update:permissions',
+      'delete:permissions',
+      'create:posts',
+      'read:posts',
+      'update:posts',
+      'delete:posts',
+    ],
+  },
+  {
+    name: 'user',
+    permissions: [
+      'read:users',
+      'update:users',
+      'read:roles',
+      'read:permissions',
+      'create:posts',
+      'read:posts',
+      'update:posts',
+      'delete:posts',
+    ],
+  },
+  {
+    name: 'guest',
+    permissions: ['read:users', 'read:posts'],
+  },
+];

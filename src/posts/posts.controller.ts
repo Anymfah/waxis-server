@@ -29,6 +29,7 @@ export class PostsController {
   @UseGuards(AuthGuard)
   @Post('')
   public async create(@Body() post: CreatePostDto): Promise<PostEntity> {
+    console.log('POST', post);
     return await this.postService.create(post);
   }
 }
