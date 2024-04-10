@@ -14,6 +14,10 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      envFilePath: '.env',
+      isGlobal: true,
+    }),
     PostsModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -28,10 +32,6 @@ import { ConfigModule } from '@nestjs/config';
     UsersModule,
     RolesModule,
     AuthModule,
-    ConfigModule.forRoot({
-      envFilePath: '.env',
-      isGlobal: true,
-    }),
   ],
   controllers: [AppController],
   providers: [AppService],

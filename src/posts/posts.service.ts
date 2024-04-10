@@ -12,7 +12,7 @@ export class PostsService {
   ) {}
 
   getPost() {
-    return 'lol';
+    return 'test';
   }
 
   /**
